@@ -13,19 +13,16 @@ const assertEqual = function(actual, expected) {
 //3. if values match {result = true}, else {false} go to next iteration
 
 const eqArrays = function(arr1, arr2) {
-  let result = true;
-  if (arr1.length === arr2.length) { // check if arrays are the same length, else return false.
-    for (let i = 0; i < arr1.length; i++) {// only need to use arr1.length as the condition since they should be the same length
-      if (arr1[i] === arr2[i]) {
-        result = true;
-      } else {
-        return result = false // exit the loops if values aren't equal
-      }
-    }
-  } else {
-    result = false;
+  if (arr1.length  !== arr2.length) { // check if arrays are the same length, else return false.
+    return false; // exit loop if not equal in length
   }
-  return result;
+  for (let i = 0; i < arr1.length; i++) { // loop through all elements
+    // only need to use arr1.length as the condition since they should be the same length
+    if (arr1[i] !== arr2[i]) {
+      return false; // exit loop if values aren't equal
+    }
+  }
+  return true; // return true after checking all elements
 };
 
 eqArrays([1, 2, 3], [3, 2, 1]); // => false
