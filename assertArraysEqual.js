@@ -1,19 +1,25 @@
 const eqArrays = function(arr1, arr2) {
   if (arr1.length  !== arr2.length) { // check if arrays are the same length, else return false.
-    console.log(`❌❌❌ Arrays are not equal: ${arr1} !== ${arr2}`); // not equal if they're not the same length
+    return false; // exit loop if not equal in length
   }
   for (let i = 0; i < arr1.length; i++) { // loop through all elements
     // only need to use arr1.length as the condition since they should be the same length
     if (arr1[i] !== arr2[i]) {
-      console.log(`❌❌❌ Arrays are not equal: ${arr1} !== ${arr2}`); // not equal if at least one value doesn't match
-      return;
+      return false; // exit loop if values aren't equal
     }
   }
-  console.log(`✅✅✅ Arrays are equal: ${arr1} === ${arr2}`); // after checking all elements, they're equal
+  return true; // return true after checking all elements
 };
 
+const assertArraysEqual = function(arr1, arr2) {
+  if (eqArrays(arr1,arr2)) { // if the return value is true
+    console.log(`✅✅✅ Equal Array Assertion Passed: ${arr1} === ${arr2}`);
+  } else {// if return value is NOT true
+    console.log(`❌❌❌ Equal Array Assertion Failed: ${arr1} !== ${arr2}`);
+  }
+};
 
-eqArrays([1, 2, 3], [1, 2, 3]); // => arrays should be equal
-eqArrays([3, 2, 1], [1, 2, 3]); // => arrays should NOT be equal
-eqArrays(['1', '2', '3'], ['1', '2', '3']); // => arrays should be equal
-eqArrays(['1', '2', '3'], ['1', '2', 3]); // => arrays should NOT be equal
+assertArraysEqual([1, 2, 3],[1, 2, 3]); // => should PASS
+assertArraysEqual([1, 2, 3],[3, 2, 1]); // => should FAIL
+assertArraysEqual(['1', '2', '3'],['1', '2', '3']); // => should PASS
+assertArraysEqual(['1', '2', '3'],['1', '2', 3]); // => should FAIL -- prints both arrays as a string so it looks like they're equal??
