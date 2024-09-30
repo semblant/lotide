@@ -12,7 +12,7 @@ const eqArrays = function(arr1, arr2) {
     return false; // exit loop if not equal in length
   }
   for (let i = 0; i < arr1.length; i++) { // loop through all elements in arr1
-    if (Array.isArray(arr1)) { // check if the element is an array
+    if (Array.isArray(arr1[i])) { // check if the element is an array
       for (let j = 0; j < arr1[i].length; j++) { // loop through elements in nested array
         if (arr1[i][j] !== arr2[i][j]) { // compare nested array elements to same index of element in arr2
           return false; // exit loop the nested array loop if nested elements not equal
