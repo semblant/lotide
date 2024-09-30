@@ -48,12 +48,12 @@ const without = function(source, itemsToRemove) {
   return newArr;
 };
 
-assertArraysEqual(without(['1', '2', '3'], [1, 2, '3']), ['1', '2']) // => should PASS
-assertArraysEqual(without(['1', '2', '3'], [1, 2, '3']), ['1']) // => should FAIL
+assertArraysEqual(without(['1', '2', '3'], [1, 2, '3']), ['1', '2']); // => should PASS
+assertArraysEqual(without(['1', '2', '3'], [1, 2, '3']), ['1']); // => should FAIL
 assertArraysEqual(without([1, 2, 3], [1]), []); // => should FAIL
-assertArraysEqual(without(['bootcamp', 'labs', 'lighthouse'],['bootcamp', 'lighthouse']), ['labs']) // => should PASS
+assertArraysEqual(without(['bootcamp', 'labs', 'lighthouse'],['bootcamp', 'lighthouse']), ['labs']); // => should PASS
 
 // Test case: ensure original array is not modified
 const words = ['Hello', 'World', 'lighthouse'];
 without(words, ['lighthouse']);
-assertArraysEqual(words, ['Hello', 'World', 'lighthouse']) // => should PASS to prove original array is not altered
+assertArraysEqual(words, ['Hello', 'World', 'lighthouse']); // => should PASS to prove original array is not altered
