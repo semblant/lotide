@@ -33,16 +33,16 @@ const assertArraysEqual = function(arr1, arr2) {
 
 const without = function(source, itemsToRemove) {
   let newArr = [];
-  for (let val of source) { //check each element of source array
-    let found = false;
+  for (let val of source) { // check each element of source array
+    let found = false; // flag to check if element from source array is in itemsToRemove array
     for (let item of itemsToRemove) { // check each element of itemsToRemove array
       if (item === val) {
-        found = true;
-        break;
+        found = true; // if item is in source exists in itemsToRemove, set flag to true
+        break; // break early to avoid redundant iterations
       }
     }
-    if (!found) {
-      newArr.push(val);
+    if (!found) { // if flag is false
+      newArr.push(val); // add the non-matching values to newArr
     }
   }
   return newArr;
