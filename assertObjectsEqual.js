@@ -3,8 +3,8 @@ const eqArrays = function(arr1, arr2) {
   for (let i = 0; i < arr1.length; i++) { // loop through all elements
     // only need to use arr1.length as the condition since they should be the same length
     if (arr1[i] !== arr2[i]) return false; // exit loop if values aren't equal
-    }
-    return true; // return true after checking all elements
+  }
+  return true; // return true after checking all elements
 };
 
 // Returns true if both objects have identical keys with identical values.
@@ -12,7 +12,7 @@ const eqArrays = function(arr1, arr2) {
 const eqObjects = (object1, object2) => {
   const keys1 = Object.keys(object1); // store object1 keys as array
   const keys2 = Object.keys(object2); // store object2 keys as array
-  if (keys1.length !== keys2.length ) return false; // return false if object key arrays are not same length
+  if (keys1.length !== keys2.length) return false; // return false if object key arrays are not same length
   else {
     for (let key of keys1) { // get the keys from any object
       if (!object2.hasOwnProperty(key)) return false; // if key from object1 doesnt match key from object2 return false
@@ -26,10 +26,9 @@ const eqObjects = (object1, object2) => {
 
 const assertObjectsEqual = (actual, expected) => {
   const inspect = require('util').inspect;
-  console.log(`Example label: ${inspect(actual)}`);
   if (eqObjects(actual, expected)) console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`); // if the return value is true
   else console.log(`❌❌❌ Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`); // if return value is NOT true
-}
+};
 
 // Test Case: Same keys and values in different positions => should PASS
 const shirtObject = {colour: "red", size: "medium"};
