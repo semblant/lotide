@@ -1,3 +1,12 @@
+const eqArrays = function(arr1, arr2) {
+  if (arr1.length  !== arr2.length) return false; // exit loop if not equal in length
+  for (let i = 0; i < arr1.length; i++) { // loop through all elements
+    // only need to use arr1.length as the condition since they should be the same length
+    if (arr1[i] !== arr2[i]) return false; // exit loop if values aren't equal
+    }
+    return true; // return true after checking all elements
+};
+
 // Returns true if both objects have identical keys with identical values.
 // Otherwise Returns false
 const eqObjects = (object1, object2) => {
@@ -10,8 +19,8 @@ const eqObjects = (object1, object2) => {
       else if (Array.isArray(object1[key]) && Array.isArray(object2[key])) { // check if the key is an array
         if (eqArrays(object1[key], object2[key]) === false) return false;
       } else if (object1[key] !== object2[key]) return false; // both objects should have the key, check if values are the same
-      return true;
     }
+    return true;
   }
 };
 
@@ -36,3 +45,7 @@ const catColourObject = {theo: "grey", marlo: "dark grey"};
 const catSizeObject = {theo: "medium", colour: "small"};
 assertObjectsEqual(catColourObject, catSizeObject);
 
+// Test Case: Object has array values
+const multiColorShirtObject = { colors: ["red", "blue"], size: ["medium", "small"]};
+const anotherMultiColorShirtObject = { size: ["small", "medium"], colors: ["blue", "red"] };
+assertObjectsEqual(multiColorShirtObject, anotherMultiColorShirtObject);
