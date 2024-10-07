@@ -38,7 +38,7 @@ const assertArraysEqual = (arr1, arr2) => {
 */
 const takeUntil = (array, callback) => {
   const results = [];
-  for (let item of array) {
+  for (const item of array) {
     if (!callback(item)) {
       results.push(item);
     } else {
