@@ -42,6 +42,7 @@ const map = (array, callback) => {
 };
 
 // Test Case: Ensure code works
+// This test ensures that the map function correctly applies the callback to each element in the array
 const words = ['ground', 'control', 'to', 'major', 'tom'];
 const results1 = map(words, word => word[0]);
 assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
@@ -51,12 +52,14 @@ const empty = [];
 const emptyResults = map(empty, word => word[0]);
 assertArraysEqual(emptyResults, []);
 
-// Test Case: different callback function => counts the length of each item in array
+// Test Case: different callback function
+// This test ensures the map function works with a callback function that counts the length of each item in array
 const candy = ['chocolate', 'gummy bears', 'sucker'];
 const resultsCandy = map(candy, word => word.length);
 assertArraysEqual(resultsCandy, [9, 11, 6]);
 
 // Test Case: ensure original array is unchanged.
+// This test ensures that the map function doesn't change the original array
 const cats = ['theo', 'marlo', 'midna', 'gigi', 'norm'];
 map(cats, word => word[0]);
 assertArraysEqual(cats, ['theo', 'marlo', 'midna', 'gigi', 'norm']);
