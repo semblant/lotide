@@ -21,9 +21,7 @@ const assertEqual = (actual, expected) => {
 
 const findKey = (object, callback) => {
   for (let key in object) {
-    if (callback(object[key])) {
-      return key;
-    }
+    if (callback(object[key])) return key;
   }
 };
 
@@ -41,9 +39,7 @@ const starsResults = findKey(stars, (x) => x.stars === 2);
 assertEqual(starsResults, 'noma');
 
 // Test Case: ensure empty object and empty callback returns undefined
-const testObj = {
-
-};
-findKey(testObj, '');
-assertEqual(testObj.key, undefined);
+const testObj = {};
+const resultTestObj = findKey(testObj, () => false);
+assertEqual(resultTestObj, undefined);
 
