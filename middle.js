@@ -6,7 +6,7 @@ Function middle(): takes an array and returns the middle number(s) as an array
 */
 const middle = function(arr) {
   let midArr = [];
-  if (arr.length < 2) { // return empty if 2 or less elements
+  if (arr.length <= 2) { // return empty if 2 or less elements
     return midArr;
   } else if (arr.length % 2 === 0) { // check if the array is even numbered
     let middleInd = arr.length / 2; // get the index at halfway
