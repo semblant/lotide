@@ -14,9 +14,9 @@ describe("#middle", () => {
     assert.deepEqual(middle([1, 2, 3, 4, 5]), [3]);
   });
 
-  it("returns '&' for ['&','@','$']", () => {
+  it("returns '@' for ['&','@','$']", () => {
     // Test Case: Checking that a 6-element array returns the two middle elements
-    assert.deepEqual(middle([1, 2, 4, 10, 14, 1]), [4, 10]);
+    assert.deepEqual(middle(['&','@','$']), ['@']);
   });
 
   it("returns 'Hello' for [1, 2, 'Hello', 10, 14]", () => {
@@ -30,9 +30,4 @@ describe("#middle", () => {
     middle(testArr);
     assert.deepEqual(testArr, [1, 2, "Hello", 4, 6]);
   });
-
-
-
-
-
 });
