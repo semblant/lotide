@@ -1,15 +1,3 @@
-/*
-* Function assertEqual(): compares 2 given arguments, console logs if the assertion passed or failed.
-* Arguments could be objects, arrays, strings, number, etc.
-* Parameters: any, any
-* Returns: no return value
-*/
-const assertEqual = (actual, expected) => {
-  if (actual === expected) console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  else console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
-};
-
-
 // psuedo code
 // 1. Find the value given by the callback in the object
 //    1a. callback will be like ex. => [starName].star === 2
@@ -19,27 +7,25 @@ const assertEqual = (actual, expected) => {
 //    3a. if it does match, return the key
 //    3b. else keep searching for the value
 
+
+
+/**
+ * The findKey function iterates through the keys of an object and returns the
+ * first key for which the provided callback function returns a truthy value.
+ *
+ * @param {Object} object - The object to search through.
+ * @param {Function} callback - A function that is called for each value of the object.
+ *                              The callback should return a truthy value for the key
+ *                              to be returned.
+ *
+ * @returns {string|undefined} - The first key that satisfies the condition in the
+ *                               callback function, or undefined if no key is found.
+ **/
 const findKey = (object, callback) => {
   for (let key in object) {
     if (callback(object[key])) return key;
   }
 };
 
-// Test Case: ensure the code is working.
-// This test ensures that the callback is correctly applied to the object.
-const stars = {
-  "Blue Hill": { stars: 1 },
-  Akaleri: { stars: 3 },
-  noma: { stars: 2 },
-  elBulli: { stars: 3 },
-  Ora: { stars: 2 },
-  Akelarre: { stars: 3 },
-};
-const starsResults = findKey(stars, (x) => x.stars === 2);
-assertEqual(starsResults, 'noma');
 
-// Test Case: ensure empty object and empty callback returns undefined
-const testObj = {};
-const resultTestObj = findKey(testObj, () => false);
-assertEqual(resultTestObj, undefined);
-
+module.exports = findKey;
