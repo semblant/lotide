@@ -5,7 +5,16 @@
 //3. if values match {result = true}, else {false} go to next iteration
 
 
-// This function compares each value in 2 arrays, returns true if they're the same, false if not.
+/**
+ * The eqArrays function compares each value in 2 arrays, returns true if they're the same, false if not.
+ *
+ * @param {Array} arr1 - The first array to compare.
+ * @param {Array} arr2 - The second array to compare.
+ *
+ * @returns {boolean} - Returns true if both arrays are of the same length and
+ * all their elements are strictly equal. Otherwise, returns false.
+ *
+ **/
 const eqArrays = (arr1, arr2) => {
   // check if arrays are the same length, else return false.
   if (arr1.length  !== arr2.length) return false; // exit loop if not equal in length

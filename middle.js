@@ -1,9 +1,10 @@
-/*
-Function middle(): takes an array and returns the middle number(s) as an array
-* Checks if the length has three elements, returns an empty array.
-* Checks for even numbered arrays, returns the two middle elements as an array.
-* Checks for odd numbered arrays, returns the middle element as an array.
-*/
+/**
+* Function middle(): takes an array and returns the middle number(s) as an array
+*
+* @param {Array} arr - the input array to get the middle element from.
+*
+* @returns {Array} midArr - returns either one element for an even array, 2 elements for an odd array, or an empty array for array with 2 or less elements.
+**/
 const middle = function(arr) {
   let midArr = [];
   if (arr.length <= 2) { // return empty if 2 or less elements

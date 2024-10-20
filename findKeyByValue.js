@@ -3,14 +3,12 @@
 // 2. If value === obj[key] return key
 
 /**
- * The findKeyByValue function searches for the first key in an object that
- * corresponds to a given value.
+ * The findKeyByValue function searches for the first key in an object that corresponds to a given value.
  *
  * @param {Object} obj - The object to search through.
  * @param {*} value - The value to search for within the object's values.
  *
- * @returns {string|undefined} - The first key that matches the provided value,
- *                               or undefined if no matching key is found.
+ * @returns {string|undefined} - The first key that matches the provided value, or undefined if no matching key is found.
 **/
 const findKeyByValue = function(obj, value) {
   for (let item in obj) { // get keys of object
@@ -19,6 +17,5 @@ const findKeyByValue = function(obj, value) {
     }
   }
 };
-
 
 module.exports = findKeyByValue;

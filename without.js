@@ -6,7 +6,14 @@
 //4. return newArr
 
 
-// Function takes in 2 arrays and returns the first array without the 2nd arrays items
+/**
+ * Function without() takes in 2 arrays and returns the first array without the 2nd arrays items.
+ *
+ * @param {Array} source - original array
+ * @param {Array} itemsToRemove - array of items to remove from source array
+ *
+ * @returns {Array} newArr - returns new array with elements from the source array without elements in itemsToRemove array.
+ *  */
 const without = function(source, itemsToRemove) {
   let newArr = [];
   for (let val of source) { // check each element of source array

@@ -1,4 +1,11 @@
-// Function takes a sentence and returns the positions/indeces of each letter as an array
+/**
+ * The letterPositions function takes a sentence and returns the positions/indeces of each letter as an array.
+ *
+ * @param {string} sentence - The input string.
+ *
+ * @returns {Object} results - An object where each key is a letter and the value is an array of indices where that letter occurs in the sentence.
+ *
+ **/
 const letterPositions = function(sentence) {
   const results = {};
   for (let index in sentence) { // loop over sentence to get each index #

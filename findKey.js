@@ -1,25 +1,17 @@
 // psuedo code
-// 1. Find the value given by the callback in the object
-//    1a. callback will be like ex. => [starName].star === 2
-// 2. Loop through the keys to get the [starName]
+// for each key of stars
 //    2a. Ex. for 'blue hill' ... for 'Akaleri' ... for 'noma'
-// 3. Ex. if on 'blue hill' check if that value matches the callback?
-//    3a. if it does match, return the key
+// 3. if object[key] is true, callback on object[key]
 //    3b. else keep searching for the value
 
-
-
 /**
- * The findKey function iterates through the keys of an object and returns the
- * first key for which the provided callback function returns a truthy value.
+ * The findKey function iterates through the keys of an object and, using a callback function, returns the first key that is truthy.
  *
  * @param {Object} object - The object to search through.
- * @param {Function} callback - A function that is called for each value of the object.
- *                              The callback should return a truthy value for the key
- *                              to be returned.
+ * @param {Function} callback - A function that is called for each value of the object. Should return truthy for the value to be returned.
  *
- * @returns {string|undefined} - The first key that satisfies the condition in the
- *                               callback function, or undefined if no key is found.
+ * @returns {string|undefined} - The first key that satisfies the condition in the callback.
+ *
  **/
 const findKey = (object, callback) => {
   for (let key in object) {

@@ -27,7 +27,7 @@ describe("#findKey", () => {
   });
 
   it("returns undefined if no key matches the condition", () => {
-    const resultNoMatch = findKey(stars, (x) => x.stars === 5);
+    const resultNoMatch = findKey(stars, (x) => x.moons === 5);
     assert.strictEqual(resultNoMatch, undefined);
   });
 

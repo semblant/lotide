@@ -17,10 +17,10 @@ describe("#countLetters", () => {
   });
 
   it("returns { '$': 2, '&': 1, '*': 3, '#': 1 } when given a symbol string", () => {
-      // Test Case: ensure symbols are counted properly
-      const symbols = '$$  & * * *  #';
-      const symbolsResult = countLetters(symbols);
-      assert.deepEqual(symbolsResult, { '$': 2, '&': 1, '*': 3, '#': 1 })
+    // Test Case: ensure symbols are counted properly
+    const symbols = '$$  & * * *  #';
+    const symbolsResult = countLetters(symbols);
+    assert.deepEqual(symbolsResult, { '$': 2, '&': 1, '*': 3, '#': 1 });
   });
 
   it("passes assertion when counting 'h' === 4 in string 'lighthouse in the house' ", () => {
@@ -39,7 +39,7 @@ describe("#countLetters", () => {
 
   it("throws error if string is not given", () => {
     // Test Case: ensure function handles the case where a string is not given
-    const error = assert.throws(() => countLetters(124), Error)
+    const error = assert.throws(() => countLetters(124), Error);
     assert.strictEqual(error.message, 'Please enter a string!');
   });
 

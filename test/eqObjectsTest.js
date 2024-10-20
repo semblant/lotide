@@ -5,9 +5,9 @@ const assert = chai.assert;
 describe("#eqObjects", () => {
   it("returns true when comparing '{colour: 'red', size: 'medium'}' to '{size: 'medium', colour: 'red'}' ", () => {
   // Test Case: Same keys and values in different positions
-  const shirtObject = {colour: "red", size: "medium"};
-  const anotherShirtObject = {size: "medium", colour: "red"};
-  assert.isTrue(eqObjects(shirtObject, anotherShirtObject), true);
+    const shirtObject = {colour: "red", size: "medium"};
+    const anotherShirtObject = {size: "medium", colour: "red"};
+    assert.isTrue(eqObjects(shirtObject, anotherShirtObject), true);
 
   });
 

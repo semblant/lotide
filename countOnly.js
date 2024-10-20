@@ -1,14 +1,17 @@
-// Function: contOnly() takes an array and object and returns counts of everything th object listed.
-// Paramters:
-//          Array: contains strings the function searches through
-//          Object: specifying what to count
-// Returns: Object
-
 //psueodcode
 // 1. search through itemsToCount to see what keys we need.
 // 2. if itemsToCount.value === true, and itemsToCount === allItems;
 // 3. push key-value pair
-// --- not sure how to handle cases with multiple of the same key-value pair
+
+/** Function: contOnly() takes an array and object and returns counts of everything th object listed.
+*
+* @param {Array} allItems - contains strings the function searches through
+* @param {Array} itemsToCount - specifying what to count
+*
+* @returns {Object} - Object that contains the number of times a specified keys occurs
+*
+**/
+
 const countOnly = function(allItems, itemsToCount) {
   let countResult = {};
   for (let item in itemsToCount) {
@@ -28,6 +31,5 @@ const countOnly = function(allItems, itemsToCount) {
   }
   return countResult;
 };
-
 
 module.exports = countOnly;
