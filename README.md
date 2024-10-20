@@ -40,6 +40,6 @@ The following functions are currently implemented:
 - `letterPositions`: takes a sentence and returns the positions/indeces of each letter as an array.
 - `map`: creates a new array based on a callback function.
 - `middle`: takes an array and returns the middle number(s) as an array.
-- `tail`: returns the last item in a given array
+- `tail`: takes an array and returns all items without the first element.
 - `takeUntil`: slices the beginning of an array until a callback is truthy.
 - `without`: takes in 2 arrays and returns the first array without the 2nd arrays items.
