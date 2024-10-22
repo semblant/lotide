@@ -20,9 +20,11 @@ const eqObjects = function(object1, object2) {
       else if (Array.isArray(object1[key]) && Array.isArray(object2[key])) { // check if the key is an array
         if (eqArrays(object1[key], object2[key]) === false) return false;
       } else if (object1[key] !== object2[key]) return false; // both objects should have the key, check if values are the same
-      return true;
     }
+    return true;
   }
 };
+
+console.log(eqObjects({'a': 1,'b': 2,'c': 3},{'a': 1,'b': 2,'d': 4}))
 
 module.exports = eqObjects;
